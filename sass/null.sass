@@ -1,0 +1,103 @@
+
+
+
+//--- COLOR ---//
+
+$color-1: #000000
+$color-2: #ffffff
+
+
+
+//--- SIZE AND TIMES ---//
+
+$win-me-1: 920px
+$win-me-2: 800px
+$win-me-2-3: 650px
+$win-me-2-2: 550px
+$win-me-3: 420px
+$win-me-3-2: 340px
+
+$block-1: 425px
+$block-2: 675px
+$block-3-1: 150px
+$block-3-2: 350px
+$block-4: 250px
+$block-5: 475px
+
+
+
+//--- MIXIN ---//
+
+=flex()
+  display: flex
+
+=pos-center()
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+
+=pos-top()
+  position: absolute
+  left: 50%
+  top: 0
+  transform: translate(-50%, 0)
+
+=pos-bottom()
+  position: absolute
+  left: 50%
+  top: 100%
+  transform: translate(-50%, 0)
+
+=flex-center()
+  +flex
+  justify-content: center
+  align-items: center
+
+
+
+//--- ZERO ---//
+
+html, body
+  line-height: 1
+  -webkit-text-size-adjust: 100%
+  -moz-text-size-adjust: 100%
+  -ms-text-size-adjust: 100%
+  text-size-adjust: 100%
+nav, header, footer, aside
+  display: block
+*:focus, *:active
+  outline: none
+a:focus, a:active
+  outline: none
+input, button, textarea
+  font-family: inherit
+input::-ms-clear
+  display: none
+button
+  cursor: pointer
+button::-moz-focus-inner
+  padding: 0
+  border: 0
+a, a:visited
+  text-decoration-line: none
+a:hover
+  text-decoration-line: none
+ul li
+  list-style: none
+img
+  vertical-align: top
+html
+  font-size: 10px
+body
+  margin: 0
+  paddig: 0
+  background-color: #ffffff
+  font-size: 16px
+*, *:before, *:after
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  text-decoration-line: none

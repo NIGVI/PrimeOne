@@ -1,0 +1,817 @@
+
+
+//------// BASE //------//
+
+body
+  font-family: 'AkzidenzGroteskBQ-BdCnd', sans-serif
+
+.win
+  width: 910px
+  padding: 0 15px
+  margin: 0 auto
+  @media (max-width: $win-me-1)
+    width: 790px
+    @media (max-width: $win-me-2)
+      width: 100%
+
+.mini-win
+  width: 440px
+  &.mini-win--right
+    float: right
+  @media (max-width: $win-me-1)
+    width: 380px
+    @media (max-width: $win-me-2)
+      width: 440px
+      margin: 0 auto
+      float: none
+      @media (max-width: 460px)
+        width: 100%
+
+.page
+  +flex
+  flex-direction: column
+  justify-content: space-between
+  min-height: 100vh
+
+.content
+  flex: 1 1 100%
+
+.text
+  font-family: "PT Sans", sans-serif
+  font-size: 15px
+  line-height: 25px
+
+.title
+  font-family: 'AkzidenzGroteskBQ-BdCnd', sans-serif
+  font-size: 25px
+  text-transform: uppercase
+  letter-spacing: 2.5px
+
+.button
+  +flex-center
+  width: 155px
+  height: 50px
+  font-family: "Bebas Neue", sans-serif
+  font-size: 15px
+  text-transform: uppercase
+  letter-spacing: 1.5px
+  background-color: $color-1
+  color: $color-2
+  cursor: pointer
+  &:hover
+    text-decoration-line: underline
+
+.link
+  font-family: "Bebas Neue", sans-serif
+  font-size: 15px
+  text-transform: uppercase
+  letter-spacing: 1.5px
+  text-decoration-line: underline
+  cursor: pointer
+
+.two-win
+  +flex
+  flex-wrap: wrap
+
+.input
+  display: block
+  width: 100%
+  height: 50px
+  padding: 16px
+  background-color: #252525
+  border: 2px solid #959595
+  color: #b0b0b0
+  &:focus
+    padding: 15px
+    border: 3px solid #e0e0e0
+    color: #e7e7e7
+
+
+
+//------// CODE //------//
+
+
+
+//--- INTRO ---//
+
+.intro-image
+  width: 50%
+  height: 425px
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.intro-content
+  width: 50%
+  height: 425px
+  background-color: $color-1
+
+.intro-body
+  +flex
+  flex-direction: column
+  justify-content: flex-end
+  height: 100%
+  padding: 80px 0 75px 60px
+  color: $color-2
+
+.intro__title
+  margin-bottom: 20px
+  font-size: 50px
+  letter-spacing: 5px
+
+.intro__text
+  max-width: 305px
+  margin-bottom: 45px
+
+.intro-btns
+  +flex
+  align-items: center
+
+.intro-btns__btn:last-child
+  +flex-center
+  width: 105px
+  height: 50px
+
+.intro-btns__btn:first-child
+  color: $color-1
+  background-color: $color-2
+
+// INTRO MEDIA //
+
+@media (max-width: $win-me-2)
+  .intro-image
+    display: none
+  .intro-content
+    width: 100%
+    height: max-content
+  .intro-body
+    justify-content: center
+    padding: 35px 30px 30px
+  .intro__title
+    margin-bottom: 10px
+  .intro__text
+    margin-bottom: 35px
+
+@media (max-width: $win-me-3)
+  .intro-btns
+    flex-wrap: wrap
+
+
+
+//--- PRODUCT ---//
+
+.products
+  +flex
+  justify-content: space-between
+  flex-wrap: wrap
+  margin-top: 75px
+  margin-bottom: 75px
+
+.products__item
+  +flex
+  flex-direction: column
+  justify-content: space-between
+  width: 25%
+
+.products__image
+  width: 100%
+  height: 225px
+  margin-bottom: 20px
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.products-info
+  flex: 0 1 100%
+  padding: 0 30px 0 5px
+  margin-bottom: 30px
+  .products__title
+    margin-bottom: 25px
+
+.products
+  .button
+    flex: 0 0 50px
+    margin-bottom: 30px
+
+// MEDIA //
+
+@media (max-width: $win-me-2)
+  .products
+    margin-top: 50px
+    margin-bottom: 10px
+    .button
+      margin-bottom: 15px
+  .products__item
+    width: 50%
+    padding: 0 10px
+    margin-bottom: 40px
+  .products__image
+    margin-bottom: 10px
+  .products-info
+    margin-bottom: 15px
+    .products__title
+      margin-bottom: 12px
+
+@media (max-width: $win-me-3)
+  .products__item
+    width: 100%
+    padding: 0 0
+  .products__image
+    height: 175px
+    width: 75%
+    min-width: 250px
+    max-width: 100%
+    margin: 0 auto 10px
+
+
+
+//--- WHY ---//
+
+// WHY TOP //
+
+.why-title-block
+  width: 50%
+  height: 150px
+  background-color: $color-1
+.why-title
+  +flex
+  float: right
+  align-items: center
+  height: 100%
+  color: $color-2
+  font-size: 50px
+  letter-spacing: 5px
+
+.why-image
+  width: 50%
+  height: 150px
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+// WHY CONTENT //
+
+.why-content
+  background-color: #ebebeb
+
+.why-items
+  +flex
+  flex-wrap: wrap
+  padding-top: 50px
+
+.why-items__item
+  +flex
+  align-items: center
+  width: 50%
+  height: 100px
+  padding-right: 30px
+  margin-bottom: 50px
+
+.why-item-image
+  +flex-center
+  flex: 0 0 100px
+  width: 100px
+  height: 100px
+  margin-right: 10px
+  background-color: #c8c8c8
+  img
+    width: 70%
+    height: 70%
+    object-fit: contain
+
+.why-item-content
+  +flex
+  flex-direction: column
+  justify-content: space-between
+
+// WHY MEDIA //
+
+@media (max-width: $win-me-1)
+  .why-title
+    justify-content: center
+    font-size: 45px
+    letter-spacing: 2.5px
+  .why-item-item__title
+    font-size: 20px
+  .why-item-item__text
+    line-height: 20px
+
+@media (max-width: $win-me-2)
+  .why-title-block
+    width: 100%
+  .why-image
+    display: none
+  .why-title
+    float: none
+  .why-items
+    padding-top: 25px
+  .why-items__item
+    width: 100%
+    height: max-content
+    max-width: 440px
+    margin-bottom: 25px
+  .why-item-item__title
+    font-size: 25px
+  .why-item-item__text
+    line-height: 25px
+
+@media (max-width: $win-me-3)
+  .why-title-block
+    height: 120px
+  .why-title
+    font-size: 35px
+  .why-items__item
+    padding-right: 0
+  .why-item-image
+    flex: 0 0 70px
+    width: 70px
+    height: 70px
+  .why-item-item__title
+    font-size: 20px
+  .why-item-item__text
+    line-height: 20px
+
+@media (max-width: $win-me-3-2)
+  .why-item-item__title
+    font-size: 18px
+  .why-item-item__text
+    font-size: 15px
+    line-height: 15px
+
+
+
+//--- HEllO ---//
+
+.hello
+  margin: 80px auto 0
+
+.hello__title
+  margin-bottom: 30px
+  font-size: 50px
+  letter-spacing: 5px
+
+.hello-items
+  +flex
+  justify-content: space-between
+  align-items: center
+  flex-wrap: wrap
+
+.hello-items__item
+  +flex
+  align-items: center
+  width: 50%
+  margin-bottom: 25px
+
+
+.hello-item__image
+  width: 27px
+  height: 27px
+  margin-right: 5px
+  img
+    width: 100%
+    height: 100%
+    object-fit: contain
+
+.hello-item__social
+  width: 24px
+  height: 24px
+  margin-right: 31px
+  img
+    width: 100%
+    height: 100%
+  &:last-child
+    margin-right: 0
+
+// HELLO MEDIA //
+
+@media (max-width: $win-me-2)
+  .hello
+    margin-top: 50px
+
+@media (max-width: $win-me-2-3)
+  .hello-items__item
+    width: 100%
+
+
+
+//--- FORM ---//
+
+.form-message-content
+  background-color: $color-1
+
+.form-message-map, .form-message-content
+  width: 50%
+
+.form-message-map
+  height: 475px
+
+.form-message-body
+  height: 475px
+  padding: 50px 0 50px 60px
+
+.form
+  +flex
+  flex-direction: column
+  justify-content: space-between
+  height: 100%
+  .form__title
+    color: $color-2
+  .form__button
+    flex: 0 0 50px
+    color: $color-1
+    background-color: $color-2
+    border: none
+  input
+    flex: 0 0 50px
+  textarea
+    flex: 1 1 100%
+  > *
+    margin-bottom: 25px
+    &:last-child
+      margin-bottom: 0
+
+// FORM MEDIA //
+
+@media (max-width: $win-me-2)
+  .form-message-map, .form-message-content
+    width: 100%
+  .form-message-map
+    height: 475px
+  .form-message-body
+    height: 435px
+    padding: 30px 30px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
