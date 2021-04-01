@@ -14,11 +14,11 @@
         <header class="header">
             <div class="header-inner win">
 
-                <div class="header-burger">
+                <div class="header-burger" id="header-burger">
                     <div class="header-burger-line"></div>
                 </div>
 
-                <div class="header-menu">
+                <div class="header-menu" id="header-menu">
 
                     <div class="header-menu-languages">
                         <div class="header-menu-languages__item -active">EN</div>
@@ -265,13 +265,13 @@
 
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $('.header-burger').click(function(event) {
-                $('.header-burger, .header-menu').toggleClass('active');
-            });
-        });
+		 const burger = document.getElementById("header-burger");
+		 const menu = document.getElementById('header-menu');
+		 burger.onclick = function() {
+			 this.classList.toggle('active');
+			 menu.classList.toggle('active');
+		 }
     </script>
 </body>
 </html>
